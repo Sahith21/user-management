@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import UserForm from "./components/UserForm";
 import UserList from "./components/UserList";
+import "./App.css";
 
 const App = () => {
   const [users, setUsers] = useState([]);

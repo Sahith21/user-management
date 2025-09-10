@@ -25,12 +25,12 @@ const UserForm = ({ fetchUsers, selectedUser, setSelectedUser }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display:"flex",flexDirection:"column",alignItems:"center",border:"1px solid grey",padding:"10px",margin:"10px",width:"100%",maxWidth:"25%",borderRadius:"10px",marginLeft:"450px",marginBottom: "20px" }}>
+    <form onSubmit={handleSubmit} className="UserForm">
       <input name="name" value={user.name} onChange={handleChange} placeholder="Name" required />
       <input style={{marginTop:"10px"}} name="age" value={user.age} onChange={handleChange} placeholder="Age" required />
       <input style={{marginTop:"10px"}} name="phone" value={user.phone} onChange={handleChange} placeholder="Phone" required />
       <input style={{marginTop:"10px"}} name="address" value={user.address} onChange={handleChange} placeholder="Address" required />
-      <button style={{marginTop:"10px"}} type="submit">{selectedUser ? "Update" : "Add"}</button>
+      <div className="UserButton"><button style={{marginTop:"10px"}} type="submit">{selectedUser ? "Update" : "Add"}</button></div>
     </form>
   );
 };
