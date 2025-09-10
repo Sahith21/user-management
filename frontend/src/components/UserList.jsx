@@ -10,12 +10,12 @@ const UserList = ({ users, fetchUsers, setSelectedUser }) => {
   return (
     <div>
       {users.map((user) => (
-        <div key={user._id} style={{ border: "1px solid black", padding: "10px", marginBottom: "10px" }}>
+        <div key={user._id} style={{ border: "1px solid grey",borderRadius:"10px", padding: "10px", marginBottom: "10px" }}>
           <h3>{user.name}</h3>
           <p>Age: {user.age}</p>
           <p>Phone: {user.phone}</p>
           <p>Address: {user.address}</p>
-          <button onClick={() => setSelectedUser(user)}>Edit</button>
+          <button style={{margin:"10px"}} onClick={() => setSelectedUser(user)}>Edit</button>
           <button onClick={() => handleDelete(user._id)}>Delete</button>
         </div>
       ))}

@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div style={{ padding: "20px" }}>
-      <h1>User Management</h1>
+      <h1 style={{textAlign:"center"}}>User Management</h1>
       <UserForm fetchUsers={fetchUsers} selectedUser={selectedUser} setSelectedUser={setSelectedUser} />
       <UserList users={users} fetchUsers={fetchUsers} setSelectedUser={setSelectedUser} />
     </div>
